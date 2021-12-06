@@ -1,0 +1,22 @@
+.main-nav {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 2.2vh 1.8em;
+}
+
+.nav-list {
+	display: flex;
+
+
+	.nav-item {
+		font-size: 16px;
+		margin-left: 30px;
+		color: $primary-color;
+		font-weight: 400;
+	}
+}
+
+.logo-container {
+	width: 40px;
+}
