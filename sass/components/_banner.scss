@@ -19,6 +19,14 @@
     color: white;
     width: fit-content;
 }
+.h1-content::after {
+    content: "|";
+    animation: caret 0.8s  infinite;
+}
+
+.no-after::after {
+    content: none;
+}
 
 .portrait-banner {
     width: 320px;
@@ -192,6 +200,25 @@
     left: 10%;
     transform: translatey(0px);
 	animation: float 5s ease-in-out infinite;
+}
+
+span {
+    border-right: .05em solid;
+    animation: caret 1s steps(1) infinite;
+    color: white;
+
+  }
+
+  @keyframes caret {
+    0% {
+      opacity: 1;
+    }
+    50% {
+        opacity: 0.6;
+      }
+    100% {
+        opacity: 1;
+    }
 }
 
 //ANIMATIONS
