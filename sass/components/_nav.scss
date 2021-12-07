@@ -3,18 +3,30 @@
 	justify-content: space-between;
 	align-items: center;
 	padding: 2.2vh 1.8em;
+	z-index: 10000;
+	position: fixed;
+	top: 0px;
+	width: 100%;
+	background-color: white;
+	box-shadow: #2222881a 2px 3px 3px 3px;
+}
+
+.nav-active {
+	background-color: $primary-color;
+	.nav-item {
+		color: white;
+	}
 }
 
 .nav-list {
 	display: flex;
+}
 
-
-	.nav-item {
-		font-size: 16px;
-		margin-left: 30px;
-		color: $primary-color;
-		font-weight: 400;
-	}
+.nav-item {
+	font-size: 16px;
+	margin-left: 30px;
+	color: $primary-color;
+	font-weight: 400;
 }
 
 .logo-container {

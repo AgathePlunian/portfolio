@@ -5,13 +5,15 @@
     position: relative;
     display: flex;
     justify-content: space-between;
+    margin-top: 11vh;
 }
 
 .arrow-down {
     width: 70px;
     position: absolute;
-    bottom: 3%;
-    right: 48%;
+	bottom: 1%;
+	left: 50%;
+	transform: translate(-50%, -50%);
 }
 
 #text-banner {
@@ -19,6 +21,11 @@
     color: white;
     width: fit-content;
 }
+
+.h1-content {
+    color: white;
+}
+
 .h1-content::after {
     content: "|";
     animation: caret 0.8s  infinite;

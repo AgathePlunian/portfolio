@@ -1,8 +1,23 @@
 h1 {
-	font-family: 'Open Sans', sans-serif;
+	font-family: 'Roboto', sans-serif;
 	font-size: 1.2em;
+}
+
+h2 {
+	font-family: 'Roboto', sans-serif;
+	font-size: 2em;
+	margin-bottom: 1em;
+	font-weight: 500;
+}
+
+h3 {
+	font-family: 'Roboto', sans-serif;
+	font-size: 1.4em;
+	font-weight: 500;
+	margin-bottom: 0.5em;
 }
 
 p, li{
 	font-family: 'Open Sans', sans-serif;
+	color: rgb(46, 46, 46);
 }
