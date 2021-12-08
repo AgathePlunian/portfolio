@@ -59,11 +59,71 @@ window.onscroll = () => {
 
 const btnDev = document.getElementById("btn-dev");
 const btnDesign = document.getElementById("btn-design");
-const btnIllu = document.getElementById("btn-ilu");
+const btnIllu = document.getElementById("btn-illu");
+const bgSpan = document.getElementById("bg-menu-works");
 
-btnDev.addEventListener('click' , switchMenu());
-btnDesign.addEventListener('click' , switchMenu);
+btnDev.addEventListener('click' , (event) => {
+	switchMenu(event);
+});
 
-function switchMenu() {
-	console.log("ok")
+btnDesign.addEventListener('click' , (event) => {
+	switchMenu(event);
+});
+
+btnIllu.addEventListener('click' , (event) => {
+	switchMenu(event);
+});
+
+function switchMenu(event) {
+	let positionActualChosen = document.getElementsByClassName("clicked")[0];
+	//console.log(positionActualChosen);
+	let btnChosen = event.target;
+	let spanBg = document.getElementById("bg-menu-works");
+	
+	//FROM DEV TO DESIGN
+	if((positionActualChosen.id == "btn-dev")&&(btnChosen.id =="btn-design")) {
+		spanBg.className="";
+		spanBg.classList.add("devToDesign");
+		spanBg.classList.add("bg-menu-design");
+	}
+
+	//FROM DESIGN TO DEV
+	if((positionActualChosen.id == "btn-design")&&(btnChosen.id =="btn-dev")) {
+		spanBg.className="";
+		spanBg.classList.add("designToDev");
+		spanBg.classList.add("bg-menu-dev");
+	}
+
+	//FROM DEV TO ILLUSTRATION
+	if((positionActualChosen.id == "btn-dev")&&(btnChosen.id =="btn-illu")) {
+		spanBg.className="";
+		spanBg.classList.add("devToIllu");
+		spanBg.classList.add("bg-menu-illu");
+	}
+
+	//FROM ILLUSTRATION TO DEV
+	if((positionActualChosen.id == "btn-illu")&&(btnChosen.id =="btn-dev")) {
+		spanBg.className="";
+		spanBg.classList.add("illuToDev");
+		spanBg.classList.add("bg-menu-dev");
+	}
+	//FROM ILLUSTRATION TO DESIGN
+	if((positionActualChosen.id == "btn-illu")&&(btnChosen.id =="btn-design")) {
+		spanBg.className="";
+		spanBg.classList.add("illuToDesign");
+		spanBg.classList.add("bg-menu-design");
+	}
+
+	//FROM DESIGN TO ILLUSTRATION
+	if((positionActualChosen.id == "btn-design")&&(btnChosen.id =="btn-illu")) {
+		spanBg.className="";
+		spanBg.classList.add("designToIllu");
+		spanBg.classList.add("bg-menu-illu");
+	}
+
+
+	console.log(btnChosen);
+	positionActualChosen.classList.remove("clicked");
+	btnChosen.classList.add("clicked");
+
 }

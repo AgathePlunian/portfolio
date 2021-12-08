@@ -157,26 +157,124 @@
 	color: $primary-color;
 	display: block;
 	padding: 5px 10px;
-
+	cursor: pointer;
 }
 
 .clicked {
 	color: white;
 } 
 
-.bg-menu-works {
+#bg-menu-works {
 	position: absolute;
 	background-color: $primary-color;
 	top: 5px;
 	bottom: 5px;
 	border-radius: 15px;
 	z-index: -1000;
+
 }
 
 .bg-menu-dev {
 	right: 229px;
 	left: 8px;
 }
+
+.devToDesign {
+	animation: devToDesign 0.4s ease-in-out forwards;
+}
+
+.designToDev {
+	animation: designToDev 0.4s ease-in-out forwards;
+}
+
+.devToIllu {
+	animation: devToIllu 0.4s ease-in-out forwards;
+}
+
+.illuToDev {
+	animation: illuToDev 0.4s ease-in-out forwards;
+}
+
+.illuToDesign {
+	animation: illuToDesign 0.4s ease-in-out forwards;
+}
+
+.designToIllu {
+	animation: designToIllu 0.4s ease-in-out forwards;
+}
+
+
+@keyframes designToIllu { 
+    0% { 
+		right: 113px;
+		left: 187px;;
+	}
+
+    100% { 
+		right: 8px;
+		left: 305px; }
+}
+
+
+@keyframes illuToDesign { 
+    0% { 
+		right: 8px;
+		left: 305px;
+	}
+
+    100% { 
+		right: 113px;
+		left: 187px; }
+}
+
+
+
+@keyframes devToIllu { 
+    0% { 
+		right: 229px; 
+		left: 8px;
+	}
+
+    100% { 
+		right: 8px;
+		left: 305px; }
+}
+
+@keyframes devToDesign{ 
+    0% { 
+		right: 229px; 
+		left: 8px;
+	}
+
+    100% { 
+		right: 113px;
+		left: 187px; }
+}
+
+@keyframes designToDev{ 
+    0% { 
+		right: 113px;
+		left: 187px;
+	}
+
+    100% { 
+		right: 229px; 
+		left: 8px;
+		 }
+}
+
+@keyframes illuToDev{ 
+    0% { 
+		right: 8px;
+		left: 305px;
+	}
+
+    100% { 
+		right: 229px; 
+		left: 8px;
+		 }
+}
+
 
 .bg-menu-design {
 	right: 113px;
