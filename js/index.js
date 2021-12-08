@@ -1,3 +1,4 @@
+// ANIMATION TEXT BANNER
 document.addEventListener('DOMContentLoaded',function(event){
   
   	let title = document.getElementById("text-banner");
@@ -43,11 +44,26 @@ document.addEventListener('DOMContentLoaded',function(event){
 
 });
 
-	const navbar = document.getElementsByClassName("main-nav")[0];
-	window.onscroll = () => {
-		if (window.scrollY > 580) {
-			navbar.classList.add('nav-active');
-		} else {
-			navbar.classList.remove('nav-active');
-		}
-	};
+// ANIMATION NAV BAR
+const navbar = document.getElementsByClassName("main-nav")[0];
+window.onscroll = () => {
+	if (window.scrollY > 580) {
+		navbar.classList.add('nav-active');
+	} else {
+		navbar.classList.remove('nav-active');
+	}
+};
+
+
+//ANIMATION MENU PORTFOLIO
+
+const btnDev = document.getElementById("btn-dev");
+const btnDesign = document.getElementById("btn-design");
+const btnIllu = document.getElementById("btn-ilu");
+
+btnDev.addEventListener('click' , switchMenu());
+btnDesign.addEventListener('click' , switchMenu);
+
+function switchMenu() {
+	console.log("ok")
+}

@@ -4,7 +4,7 @@
         <meta charset="utf-8" />
         <title>Agathe Plunian Portfolio</title>
         <meta name="viewport" content="width=device-width,initial-scale=1" />
-        <link rel="stylesheet" href="css/style.css" /> 
+        <link rel="stylesheet" href="css/styles.css" /> 
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap" rel="stylesheet">  
@@ -62,17 +62,61 @@
             <h2>Mes services</h2>
             <div class="services-ronds-container">
                 <div>
-                    <div class="rond-webdev"></div>
+                    <div class="flip-card">
+                        <div class="flip-card-inner">
+                        <div class="flip-card-front rond-webdev">
+                            <img src="img/picto/web-dev.png">
+                        </div>
+                        <div class="flip-card-back rond-webdev">
+                            <p>Développement d'application web front-end, site vitrine<br>HTML, CSS, Javascript</p>
+                        </div>
+                        </div>            
+                    </div>
+
                     <h3>Web développement</h3>
                 </div>
+
                 <div>
-                    <div class="rond-webdesign"></div>
+                    <div class="flip-card">
+                        <div class="flip-card-inner">
+                        <div class="flip-card-front rond-webdesign">
+                            <img src="img/picto/web-dev.png">
+                        </div>
+                        <div class="flip-card-back rond-webdesign">
+                            <p>Création de maquettes de sites Web <br>(Figma, Adobe XD, Indesign)</p>
+                        </div>
+                        </div>            
+                    </div>
                     <h3>Web Design</h3>
                 </div>
+            
                 <div>
-                    <div class="rond-illustration"></div>
+                    <div class="flip-card">
+                        <div class="flip-card-inner">
+                        <div class="flip-card-front rond-illustration">
+                            <img src="img/picto/web-dev.png">
+                        </div>
+                        <div class="flip-card-back rond-illustration">
+                            <p>Narration et illustration<br>(Photoshop, illustrator, peinture)</p>
+                        </div>
+                        </div>            
+                    </div>
+
                     <h3>Illustration</h3>
                 </div>
+            </div>
+        </div>
+
+        <div class="mes-travaux">
+            <h2>Mes travaux</h2>
+            <div>
+                <ul class="works-nav">
+                    <li id="btn-dev" class="btn-choice">Développement Web</li>
+                    <li id = "btn-design" class="btn-choice">Web Design</li>
+                    <li id="btn-illu" class="btn-choice clicked">Illustration</li>
+                    <span class="bg-menu-works bg-menu-illu"></span>        
+                </ul>
+                
             </div>
         </div>
         <script src="js/index.js"></script>

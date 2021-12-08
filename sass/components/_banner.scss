@@ -209,12 +209,6 @@
 	animation: float 5s ease-in-out infinite;
 }
 
-span {
-    border-right: .05em solid;
-    animation: caret 1s steps(1) infinite;
-    color: white;
-
-  }
 
   @keyframes caret {
     0% {
