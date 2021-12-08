@@ -55,7 +55,7 @@ window.onscroll = () => {
 };
 
 
-//ANIMATION MENU PORTFOLIO
+//RENDER PORTFOLIO
 
 const btnDev = document.getElementById("btn-dev");
 const btnDesign = document.getElementById("btn-design");
@@ -64,6 +64,7 @@ const bgSpan = document.getElementById("bg-menu-works");
 
 btnDev.addEventListener('click' , (event) => {
 	switchMenu(event);
+	renderProjects(event);
 });
 
 btnDesign.addEventListener('click' , (event) => {
@@ -73,6 +74,10 @@ btnDesign.addEventListener('click' , (event) => {
 btnIllu.addEventListener('click' , (event) => {
 	switchMenu(event);
 });
+
+//RENDER PROJECTS FUNCTION
+
+//MENU SWITCH PORTFOLIO ANIMATION
 
 function switchMenu(event) {
 	let positionActualChosen = document.getElementsByClassName("clicked")[0];
@@ -121,8 +126,6 @@ function switchMenu(event) {
 		spanBg.classList.add("bg-menu-illu");
 	}
 
-
-	console.log(btnChosen);
 	positionActualChosen.classList.remove("clicked");
 	btnChosen.classList.add("clicked");
 
