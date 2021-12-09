@@ -61,10 +61,11 @@ const btnDev = document.getElementById("btn-dev");
 const btnDesign = document.getElementById("btn-design");
 const btnIllu = document.getElementById("btn-illu");
 const bgSpan = document.getElementById("bg-menu-works");
+const worksArea = document.getElementById("works-area");
+const illustrationWork = document.getElementsByClassName("illustrations")[0];
 
 btnDev.addEventListener('click' , (event) => {
 	switchMenu(event);
-	renderProjects(event);
 });
 
 btnDesign.addEventListener('click' , (event) => {
@@ -73,9 +74,14 @@ btnDesign.addEventListener('click' , (event) => {
 
 btnIllu.addEventListener('click' , (event) => {
 	switchMenu(event);
+	renderProjects(event);
 });
 
 //RENDER PROJECTS FUNCTION
+function renderProjects(event) {
+	illustrationWork.classList.remove("display-none");
+	illustrationWork.classList.add("display-flex")
+}
 
 //MENU SWITCH PORTFOLIO ANIMATION
 

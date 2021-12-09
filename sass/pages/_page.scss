@@ -135,6 +135,7 @@
 
 .mes-travaux {
 	padding: 3em;
+	background-color: rgba(228, 228, 228, 0.055);
 	h2 {
 		text-align: center;
 		color: $primary-color;
@@ -142,7 +143,8 @@
 }
 
 .works-nav {
-	margin: 0 auto;
+	z-index: 1000;
+	margin: 0 auto 3em auto;
 	display: flex;
 	border: 1px solid $primary-color;
 	border-radius: 20px;
@@ -151,6 +153,7 @@
 	justify-content: space-between;
 	align-items: center;
 	position: relative;
+	
 }
 
 .btn-choice {
@@ -171,12 +174,21 @@
 	bottom: 5px;
 	border-radius: 15px;
 	z-index: -1000;
-
 }
 
 .bg-menu-dev {
 	right: 229px;
 	left: 8px;
+}
+
+.bg-menu-design {
+	right: 113px;
+	left: 187px;
+}
+
+.bg-menu-illu {
+	right: 8px;
+	left: 305px;
 }
 
 .devToDesign {
@@ -276,12 +288,3 @@
 }
 
 
-.bg-menu-design {
-	right: 113px;
-	left: 187px;
-}
-
-.bg-menu-illu {
-	right: 8px;
-	left: 305px;
-}
