@@ -47,7 +47,7 @@ p, li {
   position: relative;
   display: flex;
   justify-content: space-between;
-  margin-top: 11vh; }
+  margin-top: 9vh; }
 
 .arrow-down {
   width: 70px;
@@ -259,7 +259,7 @@ p, li {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 2.2vh 1.8em;
+  padding: 0.7em 1.8em;
   z-index: 10000;
   position: fixed;
   top: 0px;
@@ -285,13 +285,17 @@ p, li {
   width: 40px; }
 
 .a-propos {
+  opacity: 0;
   padding: 3em 16em;
   text-align: center;
   position: relative;
-  height: 90vh; }
+  height: 550px;
+  background-color: rgba(252, 252, 252, 0.699);
+  z-index: -1000; }
   .a-propos p {
     z-index: 1000;
-    font-size: 1.1em; }
+    font-size: 1.1em;
+    color: #222288; }
   .a-propos h2 {
     color: #222288;
     margin-bottom: 3em; }
@@ -303,13 +307,21 @@ p, li {
   background-color: #E2F3FA;
   border-radius: 50%;
   position: absolute;
-  top: 55%;
+  top: 320px;
   left: 50%;
   transform: translate(-50%, -50%); }
 
+@keyframes animAPropos {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+.anim-a-propos {
+  animation: animAPropos 0.4s ease-in-out forwards; }
+
 .services {
   background-color: #FDF4FA;
-  padding: 3em; }
+  padding: 3em 2em; }
   .services h2 {
     text-align: center;
     color: #222288;
@@ -327,8 +339,8 @@ p, li {
 
 .flip-card {
   background-color: transparent;
-  width: 250px;
-  height: 250px;
+  width: 220px;
+  height: 220px;
   perspective: 1000px;
   margin-bottom: 1.5em; }
 
@@ -373,7 +385,7 @@ p, li {
   align-items: center; }
   .flip-card-back p {
     color: white;
-    font-size: 1.2em; }
+    font-size: 1.1em; }
 
 .rond-webdev img, .rond-webdesign img, .rond-illustration img {
   width: 70%; }
@@ -383,11 +395,11 @@ p, li {
   box-shadow: #22228846 2px 6px 6px 3px, #2222882f 0px 0px 8px 0px; }
 
 .rond-webdesign {
-  background-color: #7f4e9e;
+  background-color: #714e9e;
   box-shadow: #9868b52d 2px 6px 7px 5px, #9868b52d 0px 0px 8px 0px; }
 
 .rond-illustration {
-  background-color: #e9767f;
+  background-color: #f07c7c;
   box-shadow: #fca5bc25 2px 6px 7px 5px, #fca5bc25  0px 0px 8px 0px; }
 
 .mes-travaux {
@@ -498,19 +510,16 @@ p, li {
   100% {
     right: 229px;
     left: 8px; } }
-.webDev-portfolio {
+#works-area {
+  min-height: 500px; }
+
+.webDev-portfolio, .WebDesign-portfolio {
   display: grid;
   grid-template-columns: repeat(3, 31%);
   grid-gap: 2em;
   width: 90%;
-  margin: auto; }
-
-.card-portfolio {
-  position: relative;
-  border-radius: 8px;
-  overflow: hidden;
-  height: 170px;
-  box-shadow: rgba(63, 63, 63, 0.164) 3px 4px 5px, rgba(105, 105, 105, 0.13) -3px -3px 3px; }
+  margin: auto;
+  position: relative; }
 
 .hover-card {
   background-color: #222288;
@@ -522,15 +531,46 @@ p, li {
   left: 0;
   bottom: 0;
   border-radius: 8px;
-  display: flex;
+  display: none;
   flex-flow: column;
   justify-content: center;
-  align-items: center; }
+  align-items: center;
+  cursor: pointer; }
 
+.card-portfolio {
+  position: relative;
+  border-radius: 8px;
+  overflow: hidden;
+  max-height: 170px;
+  box-shadow: rgba(63, 63, 63, 0.164) 3px 4px 5px, rgba(105, 105, 105, 0.13) -3px -3px 3px; }
+  .card-portfolio:hover .hover-card {
+    display: flex; }
+  .card-portfolio:hover .title-hover {
+    animation: titleHover 0.5s ease-in-out; }
+  .card-portfolio:hover .see-more-container {
+    animation: seeMoreHover 0.5s ease-in-out; }
+
+@keyframes titleHover {
+  0% {
+    opacity: 0;
+    top: -30px; }
+  100% {
+    opacity: 1;
+    top: 0; } }
+@keyframes seeMoreHover {
+  0% {
+    opacity: 0;
+    right: 35px;
+    bottom: 10px; }
+  100% {
+    opacity: 1;
+    right: 15px;
+    bottom: 10px; } }
 .title-hover {
   display: block;
   font-size: 1.3em;
-  color: white; }
+  color: white;
+  position: relative; }
 
 .see-more-container {
   display: flex;
@@ -560,7 +600,11 @@ p, li {
 
 .display-flex {
   display: flex;
-  animation: portfolioAppear 0.9s ease-in-out forwards; }
+  animation: portfolioAppear 0.6s ease-in-out forwards; }
+
+.display-grid {
+  display: grid;
+  animation: portfolioAppear 0.6s ease-in-out forwards; }
 
 @keyframes portfolioAppear {
   0% {
@@ -600,5 +644,12 @@ p, li {
   width: 24%; }
   .eight img {
     width: 108%; }
+
+.skills {
+  background-color: #E5E5FF;
+  padding: 3em; }
+  .skills h2 {
+    color: #222288;
+    text-align: center; }
 
 /*# sourceMappingURL=styles.css.map */

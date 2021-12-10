@@ -4,7 +4,6 @@ document.addEventListener('DOMContentLoaded',function(event){
   	let title = document.getElementById("text-banner");
  	var i = 0;
 	var dataText = ["Bonjour !" ,"Je suis Agathe Plunian" ,"développeuse front-end" ,"et illustratrice"];
-	var speed = 50; /* The speed/duration of the effect in milliseconds */
 	
 	function typeWriter(currentText, line , j, finish) {
 
@@ -14,7 +13,7 @@ document.addEventListener('DOMContentLoaded',function(event){
 			// wait for a while and call this function again for next character
 			setTimeout(function() {
 			  typeWriter(currentText, line , j + 1)
-				}, 50);
+				}, 40);
 		  }
 		if(j == currentText.length) {
 			let lineText = document.getElementsByClassName("h1-content")[i];
@@ -22,7 +21,7 @@ document.addEventListener('DOMContentLoaded',function(event){
 			i ++;
 			setTimeout(function() {
 				StartTextAnimation(i)
-			}, 200);
+			}, 100);
 			
 		}
 	}
@@ -46,11 +45,17 @@ document.addEventListener('DOMContentLoaded',function(event){
 
 // ANIMATION NAV BAR
 const navbar = document.getElementsByClassName("main-nav")[0];
+const aProposBlock = document.getElementsByClassName("a-propos")[0];
 window.onscroll = () => {
 	if (window.scrollY > 580) {
 		navbar.classList.add('nav-active');
 	} else {
 		navbar.classList.remove('nav-active');
+	}
+
+	if (window.scrollY > 360) {
+		aProposBlock.classList.add('anim-a-propos');
+	
 	}
 };
 
@@ -63,13 +68,17 @@ const btnIllu = document.getElementById("btn-illu");
 const bgSpan = document.getElementById("bg-menu-works");
 const worksArea = document.getElementById("works-area");
 const illustrationWork = document.getElementsByClassName("illustrations")[0];
+const webDevWork = document.getElementsByClassName("webDev-portfolio")[0];
+const webDesign = document.getElementsByClassName("WebDesign-portfolio")[0];
 
 btnDev.addEventListener('click' , (event) => {
 	switchMenu(event);
+	renderProjects(event);
 });
 
 btnDesign.addEventListener('click' , (event) => {
 	switchMenu(event);
+	renderProjects(event);
 });
 
 btnIllu.addEventListener('click' , (event) => {
@@ -79,8 +88,34 @@ btnIllu.addEventListener('click' , (event) => {
 
 //RENDER PROJECTS FUNCTION
 function renderProjects(event) {
-	illustrationWork.classList.remove("display-none");
-	illustrationWork.classList.add("display-flex")
+	//console.log(event.target);
+	if(event.target.id == "btn-illu") {
+		webDesign.classList.add("display-none");
+		webDesign.classList.remove("display-grid");
+		webDevWork.classList.add("display-none");
+		webDevWork.classList.remove("display-grid");
+		illustrationWork.classList.remove("display-none");
+		illustrationWork.classList.add("display-flex");
+	}
+	if(event.target.id == "btn-dev") {
+		webDesign.classList.add("display-none");
+		webDesign.classList.remove("display-grid");
+		illustrationWork.classList.add("display-none");
+		illustrationWork.classList.remove("display-flex");
+		webDevWork.classList.remove("display-none");
+		webDevWork.classList.add("display-grid");
+	}
+
+	if(event.target.id == "btn-design") {
+		illustrationWork.classList.add("display-none");
+		illustrationWork.classList.remove("display-flex");
+		webDevWork.classList.add("display-none");
+		webDevWork.classList.remove("display-grid");
+		webDesign.classList.remove("display-none");
+		webDesign.classList.add("display-grid");
+	
+	}
+	
 }
 
 //MENU SWITCH PORTFOLIO ANIMATION
