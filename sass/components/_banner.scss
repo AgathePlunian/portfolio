@@ -1,5 +1,6 @@
 .banner {
-	height: 90vh;
+	height: 590px;
+    min-height: 590px;
     background-color: $primary-color;
     padding: 7em 10em 5em 5em;
     position: relative;
@@ -10,11 +11,28 @@
 
 .arrow-down {
     width: 70px;
+    height: 70px;
     position: absolute;
 	bottom: 1%;
 	left: 50%;
 	transform: translate(-50%, -50%);
+
+    &:hover {
+        animation: arrowBanner 200ms ease-in-out forwards ;
+    }
 }
+
+@keyframes arrowBanner {
+    0% {
+        width: 70px;
+        height: 70px;
+    }
+    100% {
+        width: 75px;
+        height: 75px;
+    }
+}
+
 
 #text-banner {
     font-size: 2.8em;

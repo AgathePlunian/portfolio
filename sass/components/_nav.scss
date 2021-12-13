@@ -26,7 +26,12 @@
 	font-size: 16px;
 	margin-left: 30px;
 	color: $primary-color;
-	font-weight: 400;
+	font-weight: 600;
+	cursor: pointer;
+
+	&:hover {
+		color: $violet;
+	}
 }
 
 .logo-container {

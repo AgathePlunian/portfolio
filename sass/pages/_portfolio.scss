@@ -1,5 +1,10 @@
 #works-area {
-	min-height: 500px;
+	min-height: 550px;
+	
+}
+
+.mes-travaux {
+	background-color: white;
 }
 
 //PORTFOLIO DEV
@@ -14,6 +19,7 @@
 
 .hover-card {
 	background-color: $primary-color;
+	opacity: 0.9;
 	position: absolute;
 	padding: 2em;
 	text-align: center;
@@ -35,7 +41,7 @@
 	border-radius: 8px;
 	overflow: hidden;
 	max-height: 170px;
-	box-shadow: rgba(63, 63, 63, 0.164) 3px 4px 5px , rgba(105, 105, 105, 0.13) -3px -3px 3px ;
+	box-shadow: 0 5px 20px 0 rgba(153, 153, 179, 0.288);
 	
 	&:hover {
 		.hover-card {
@@ -148,6 +154,7 @@
 	overflow: hidden;
 	height: 240px;
 	margin-bottom: 1.5em;
+	cursor: pointer;
 }
 
 .one {

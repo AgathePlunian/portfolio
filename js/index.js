@@ -43,19 +43,99 @@ document.addEventListener('DOMContentLoaded',function(event){
 
 });
 
+// NAV LINK ET FLECHE BANNER
+const navAPropos = document.getElementById("nav-a-propos"); 
+const navService = document.getElementById("nav-services");
+const navPortfolio = document.getElementById("nav-portfolio");
+const navCompetence = document.getElementById("nav-competences");
+const navContact = document.getElementById("nav-contact");
+
+const arrowDown = document.getElementById("arrow-down");
+arrowDown.addEventListener('click' , scrollDown);
+navAPropos.addEventListener('click' , scrollDown);
+
+navService.addEventListener('click' , scrollToService);
+navPortfolio.addEventListener('click' , scrollToPorfolio);
+navCompetence.addEventListener('click', scrollToCompetences)
+navContact.addEventListener('click', scrollToContact)
+
+function scrollToContact() {
+	window.scrollTo({
+		top: 3610,
+		behavior: 'smooth'
+	  });  
+}
+
+function scrollToPorfolio() {
+	window.scrollTo({
+		top: 1790,
+		behavior: 'smooth'
+	  });    
+}
+
+function scrollToCompetences() {
+	window.scrollTo({
+		top: 2625,
+		behavior: 'smooth'
+	  });    
+}
+
+function scrollToService() {
+	window.scrollTo({
+		top: 1145,
+		behavior: 'smooth'
+	  });    
+}
+
+
+function scrollDown() {
+        //var element = document.getElementById("a-propos");;
+		window.scrollTo({
+			top: 600,
+			behavior: 'smooth'
+		  });    
+}
+
 // ANIMATION NAV BAR
 const navbar = document.getElementsByClassName("main-nav")[0];
 const aProposBlock = document.getElementsByClassName("a-propos")[0];
+
+const barHTML = document.getElementsByClassName("html-css")[0];
+const barJS = document.getElementsByClassName("js")[0];
+const barPHP = document.getElementsByClassName("php")[0];
+const barSQL = document.getElementsByClassName("sql")[0];
+const barPS = document.getElementsByClassName("photoshop")[0];
+const barIND = document.getElementsByClassName("indesign")[0];
+const barAI = document.getElementsByClassName("illustrator")[0];
+const barXD = document.getElementsByClassName("adobeXD")[0];
+const barFI = document.getElementsByClassName("figma")[0];
+
 window.onscroll = () => {
 	if (window.scrollY > 580) {
 		navbar.classList.add('nav-active');
 	} else {
 		navbar.classList.remove('nav-active');
-	}
+	} 
 
-	if (window.scrollY > 360) {
+	if (window.scrollY > 200) {
 		aProposBlock.classList.add('anim-a-propos');
 	
+	}
+
+	if (window.scrollY > 2300) {
+		console.log("ok");
+		barJS.classList.add('animation-bar-js');
+		barHTML.classList.add("animation-bar-html");
+		barPHP.classList.add("animation-bar-php");
+		barSQL.classList.add("animation-bar-sql");
+	}
+
+	if (window.scrollY > 2600) {
+		barPS.classList.add("animation-bar-ps");
+		barIND.classList.add("animation-bar-ind");
+		barAI.classList.add("animation-bar-ai");
+		barXD.classList.add("animation-bar-XD");
+		barFI.classList.add("animation-bar-FI")
 	}
 };
 
@@ -171,3 +251,4 @@ function switchMenu(event) {
 	btnChosen.classList.add("clicked");
 
 }
+
