@@ -1,0 +1,152 @@
+#pop-up {
+	z-index: 3010;
+	position: absolute;
+	background-color: white;
+	top: 5em;
+	height: 540px;
+	right: 9em;
+	left: 9em;
+	padding: 1.3em 2em 3em 2em;
+	border-radius: 20px;
+	box-shadow: 0 5px 20px 0 rgba(153, 153, 179, 0.479);
+}
+
+.pop-up-display-anim {
+	animation: popUpAppear 0.5s ease-in-out forwards;
+}
+
+@keyframes popUpAppear{ 
+    0% { 
+		opacity: 0;
+		top: 8em;
+	}
+
+    100% { 
+		opacity: 1; 
+		top: 5em;}
+}
+
+
+.pop-up-display-none-anim {
+	animation: popUpdisappear 0.4s ease-in-out forwards;
+}
+
+.pop-up-display-none {
+	display: none;
+}
+
+@keyframes popUpdisappear{ 
+    0% { 
+		opacity: 1;
+		top: 5em;
+	}
+
+    100% { 
+		opacity: 0; 
+		top: 7em;}
+}
+
+.close-container {
+	width: 100%;
+	display: flex;
+	justify-content: end;
+	cursor: pointer;
+
+	&:hover {
+		opacity: 0.6;
+	}
+}
+
+#close-pop-up {
+	width: 30px;
+	height: 30px;
+	display: block;
+}
+
+.bg-pop-up {
+ 	z-index: 2000;
+	position: fixed;
+	top: 0;
+	right: 0;
+	left: 0;
+	bottom: 0;
+	background-color: rgba(18, 23, 49, 0.603);
+}
+
+.bg-display-none {
+	opacity: 0;
+	transition: opacity  0.4s;
+
+}
+
+
+
+.hide-body {
+	height: 20vh;
+	overflow-y: hidden;
+}
+
+
+.popup-flex {
+	display: flex;
+
+}
+
+.img-popup {
+	width: 30%;
+	border-radius: 5px;
+	overflow: hidden;
+	box-shadow: 0 5px 10px 0 rgba(100, 100, 131, 0.288);
+	margin-right: 2.5em;
+}
+
+.text-popup {
+	width: 55%;
+	display: flex;
+	flex-flow: column;
+	justify-content: space-between;
+}
+
+.pop-up-title {
+	color: $primary-color;
+	font-size: 2.4em;
+	font-weight: 600;
+	margin-bottom: 1em;
+}
+
+.little-title-popup {
+	font-size: 1.1em;
+	color: rgb(36, 36, 36);
+	font-weight: 500;
+	margin-bottom: 9px;
+}
+
+.pop-up-p {
+	margin-bottom: 1em;
+	color: rgb(97, 96, 96);
+}
+
+.technologies-list{
+	display: flex;
+}
+
+.techno-item {
+	background-color: rgb(173, 162, 238);
+	color: white;
+	padding: 3px 14px;
+	margin-right: 6px;
+	border-radius: 15px;
+	font-size: 15px;
+	box-shadow: 0 5px 6px 0 rgba(120, 62, 122, 0.123);
+
+}
+
+.btn-margin-top {
+	margin-top: 1.8em;
+
+}
+
+.avoid {
+	pointer-events: none;
+
+}

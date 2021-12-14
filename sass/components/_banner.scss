@@ -18,11 +18,11 @@
 	transform: translate(-50%, -50%);
 
     &:hover {
-        animation: arrowBanner 200ms ease-in-out forwards ;
+        animation: hoverZoom 200ms ease-in-out forwards ;
     }
 }
 
-@keyframes arrowBanner {
+@keyframes hoverZoom {
     0% {
         width: 70px;
         height: 70px;

@@ -3,8 +3,30 @@
 	
 }
 
+
+//PORTFOLIO
+
 .mes-travaux {
-	background-color: white;
+	padding: 3em;
+	background-color: rgba(228, 228, 228, 0.055);
+	position: relative;
+	h2 {
+		text-align: center;
+		color: $primary-color;
+	}
+}
+
+.works-nav {
+	margin: 0 auto 3em auto;
+	display: flex;
+	border: 1px solid $primary-color;
+	border-radius: 20px;
+	width: 420px;
+	padding: 5px 9px;
+	justify-content: space-between;
+	align-items: center;
+	position: relative;
+	
 }
 
 //PORTFOLIO DEV
