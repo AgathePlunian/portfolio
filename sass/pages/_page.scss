@@ -1,3 +1,70 @@
+.card-service {
+	background-color: white;
+	width: 29%;
+	box-shadow: 0 5px 20px 0 rgba(104, 104, 133, 0.288);
+	border-radius: 12px;
+	text-align: center;
+	padding: 4.3em 1.3em 1.6em 1.3em;
+	position: relative;
+	height: 310px;
+}
+.rond-card-service {
+	transform: translate(-50%, -50%);
+	left: 50%;
+	position: absolute;
+	top: 0em;
+	width: 120px;
+	height: 120px;
+	text-align: center;
+	border-radius: 50%;
+	padding: 1.7em;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.title-card-service{
+	font-size: 1.5em;
+	color: $primary-color;
+	font-weight: 600;
+	
+}
+
+.p-margin-bottom {
+	margin-bottom: 10px;
+} 
+
+
+.title-card-rond {
+	font-size: 1.1em;
+	color: $primary-color;
+	margin-bottom: 10px;
+	font-weight: 500;
+	color: $primary-color;
+
+}
+
+.card-rond-webdev {
+	background-color: $primary-color;
+}
+
+.card-rond-webdesign {
+	background-color: $violet;
+}
+
+.card-rond-illu {
+	background-color: $pink;
+}
+
+
+
+
+
+
+
+
+
+
 .a-propos {
 	opacity: 0;
 	padding: 3em 16em;
@@ -61,78 +128,8 @@
 	display: flex;
 	justify-content: space-between;
 	width: 80%;
-	margin: 0 auto;
+	margin: 8em auto 0 auto;
 	height: 60vh;
-	h3 {
-		color: $primary-color;
-		text-align: center;
-	}
-}
-
-.flip-card {
-	background-color: transparent;
-	width: 220px;
-	height: 220px;
-	perspective: 1000px;
-	margin-bottom: 1.5em;	
-}
-
-.flip-card-inner {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  text-align: center;
-  transition: transform 0.8s;
-  transform-style: preserve-3d;
-}
-
-.flip-card:hover .flip-card-inner {
-	transform: rotateY(180deg);
-  }
-
-
-/* Position the front and back side */
-.flip-card-front, .flip-card-back {
-	position: absolute;
-	width: 100%;
-	height: 100%;
-	-webkit-backface-visibility: hidden; /* Safari */
-	backface-visibility: hidden;
-	border-radius: 50%;
-  }
-  
-  /* Style the front side (fallback if image is missing) */
-  .flip-card-front {
-	color: black;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-  }
-  
-  /* Style the back side */
-  .flip-card-back {
-	color: white;
-	transform: rotateY(180deg);
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	padding: 1.5em;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-
-	p {
-		color: white;
-		font-size: 1.1em;
-	}
-  }
-
-
-.rond-webdev , .rond-webdesign, .rond-illustration {
-
-	img {
-		width: 70%;
-	}
 }
 
 .rond-webdev {

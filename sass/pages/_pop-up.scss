@@ -2,13 +2,15 @@
 	z-index: 3010;
 	position: absolute;
 	background-color: white;
-	top: 5em;
-	height: 540px;
-	right: 9em;
-	left: 9em;
-	padding: 1.3em 2em 3em 2em;
+	top: -2em;
+	height: fit-content;
+	max-height: 550px;
+	right: 8em;
+	left: 8em;
+	padding: 1.3em 2em 2em 2em;
 	border-radius: 20px;
 	box-shadow: 0 5px 20px 0 rgba(153, 153, 179, 0.479);
+	overflow: scroll;
 }
 
 .pop-up-display-anim {
@@ -25,7 +27,6 @@
 		opacity: 1; 
 		top: 5em;}
 }
-
 
 .pop-up-display-none-anim {
 	animation: popUpdisappear 0.4s ease-in-out forwards;
@@ -58,8 +59,8 @@
 }
 
 #close-pop-up {
-	width: 30px;
-	height: 30px;
+	width: 26px;
+	height: 26px;
 	display: block;
 }
 
@@ -76,32 +77,75 @@
 .bg-display-none {
 	opacity: 0;
 	transition: opacity  0.4s;
-
 }
-
-
 
 .hide-body {
 	height: 20vh;
 	overflow-y: hidden;
 }
 
-
 .popup-flex {
 	display: flex;
 
 }
 
-.img-popup {
-	width: 30%;
-	border-radius: 5px;
-	overflow: hidden;
-	box-shadow: 0 5px 10px 0 rgba(100, 100, 131, 0.288);
-	margin-right: 2.5em;
+.imgs-container-popup {
+	width: 31%;
+	margin-right: 1.5em;
+
 }
 
+.img-shadow {
+	margin-bottom: 1em;
+	border-radius: 5px;
+	box-shadow: 0 5px 10px 0 rgba(72, 72, 100, 0.288);
+}
+
+.img-popup {
+	width: 31%;
+	border-radius: 5px;
+	overflow: hidden;
+	box-shadow: 0 5px 10px 0 rgba(72, 72, 100, 0.288);
+	margin-right: 1.5em;
+	max-height: 470px;
+	height: fit-content;
+
+	img {
+		width: 100%;
+	}
+	
+}
+
+.img-omf-container {
+	box-shadow: none;
+	overflow-y: scroll;	
+	
+
+	img {
+		margin-right: 10px;
+		max-height: 480px;
+		width: auto;
+	}
+
+	&::-webkit-scrollbar {
+		-webkit-appearance: none;
+		width: 14px;
+	  }
+	&::-webkit-scrollbar-thumb {
+		background-color: rgba(66, 65, 124, 0.685); /* color of the scroll thumb */
+		border-radius: 20px; /* roundness of the scroll thumb */
+		border: 3px solid rgb(240, 240, 240); /* creates padding around scroll thumb */
+	  
+	  }
+	&::-webkit-scrollbar-track {
+		background: rgb(240, 240, 240); /* color of the tracking area */
+		border-radius: 20px; 
+	  }
+}
+  
+
 .text-popup {
-	width: 55%;
+	width: 60%;
 	display: flex;
 	flex-flow: column;
 	justify-content: space-between;
@@ -109,25 +153,26 @@
 
 .pop-up-title {
 	color: $primary-color;
-	font-size: 2.4em;
+	font-size: 2em;
 	font-weight: 600;
-	margin-bottom: 1em;
+	margin-bottom: 0.5em;
 }
 
 .little-title-popup {
-	font-size: 1.1em;
+	font-size: 1.05em;
 	color: rgb(36, 36, 36);
 	font-weight: 500;
-	margin-bottom: 9px;
+	margin-bottom: 6px;
 }
 
 .pop-up-p {
-	margin-bottom: 1em;
+	margin-bottom: 0.5em;
 	color: rgb(97, 96, 96);
 }
 
 .technologies-list{
 	display: flex;
+	flex-flow: row flex;
 }
 
 .techno-item {
@@ -142,7 +187,7 @@
 }
 
 .btn-margin-top {
-	margin-top: 1.8em;
+	margin-top: 1.2em;
 
 }
 
