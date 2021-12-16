@@ -80,7 +80,7 @@
 }
 
 .hide-body {
-	height: 20vh;
+	height: 100vh;
 	overflow-y: hidden;
 }
 
@@ -172,7 +172,7 @@
 
 .technologies-list{
 	display: flex;
-	flex-flow: row flex;
+	flex-flow: row wrap;
 }
 
 .techno-item {
@@ -183,7 +183,7 @@
 	border-radius: 15px;
 	font-size: 15px;
 	box-shadow: 0 5px 6px 0 rgba(120, 62, 122, 0.123);
-
+	margin-bottom: 10px;
 }
 
 .btn-margin-top {

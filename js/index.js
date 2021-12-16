@@ -1,9 +1,24 @@
-var tabletDevice = window.matchMedia("(max-width: 1024px)");
 
 
-// ANIMATION TEXT BANNER
 document.addEventListener('DOMContentLoaded',function(event){
   
+	//ANIMATION BURGER MENU
+	let menuToggle = document.getElementById("toggle-menu");
+	let burgerMenu = document.getElementById("nav-icon3");
+	
+	burgerMenu.addEventListener('click' , function () {
+		if(this.classList.contains("open")) {
+			this.classList.remove("open");
+			menuToggle.classList.add("display-none");
+		}
+		else {
+			this.classList.add("open");
+			menuToggle.classList.remove("display-none");
+		}
+	})
+	
+
+// ANIMATION TEXT BANNER
   	let title = document.getElementById("text-banner");
  	var i = 0;
 	var dataText = ["Bonjour !" ,"Je suis Agathe Plunian" ,"développeuse front-end" ,"et illustratrice"];

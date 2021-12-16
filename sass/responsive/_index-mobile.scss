@@ -306,4 +306,54 @@
 	.bg-bar {
 		height: 10px;
 	}
+
+
+	//POPUP 
+
+	#pop-up {
+		margin: 0;
+		top: -10em;
+		right: 0.5em;
+		left: 0.5em;
+		height: 80vh;
+		padding: 1.3em;
+	}
+
+	.popup-flex {
+		display: flex;
+		flex-flow: column;
+		overflow: hidden;
+	}
+
+	.img-omf-container {
+		display: flex;
+		flex-flow: row;
+		justify-content: center;
+		width: 60%;
+		margin: auto;
+		height: fit-content;
+		overflow: hidden;
+
+		img {
+			margin: 0 10px 0 10px;
+			width: auto;
+			height: 200px;
+		}
+		&::-webkit-scrollbar-track {
+			background: none;
+			border-radius: 20px; 
+		  }
+	}
+
+	.img-popup {
+		width: 100%;
+		margin-bottom: 2em;
+		max-height: 200px;
+		margin-top: 1em;
+	}
+
+	.text-popup {
+		width: 100%;
+
+	}
 }
