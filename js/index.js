@@ -1,3 +1,6 @@
+var tabletDevice = window.matchMedia("(max-width: 1024px)");
+
+
 // ANIMATION TEXT BANNER
 document.addEventListener('DOMContentLoaded',function(event){
   
@@ -60,40 +63,115 @@ navCompetence.addEventListener('click', scrollToCompetences)
 navContact.addEventListener('click', scrollToContact)
 
 function scrollToContact() {
-	window.scrollTo({
-		top: 3610,
-		behavior: 'smooth'
-	  });  
+	if (window.matchMedia("(max-width:767px)").matches) {
+		window.scrollTo({
+			top: 6000,
+			behavior: 'smooth'
+		  }); 
+	}
+	 else if (window.matchMedia("(max-width:1024px)").matches) {
+		window.scrollTo({
+			top: 3900,
+			behavior: 'smooth'
+		  }); 
+	 }
+
+	 else {
+		window.scrollTo({
+			top: 3800,
+			behavior: 'smooth'
+		  }); 
+	 }
 }
 
 function scrollToPorfolio() {
-	window.scrollTo({
-		top: 1790,
-		behavior: 'smooth'
-	  });    
+	if (window.matchMedia("(max-width:767px)").matches) {
+		window.scrollTo({
+			top: 2550,
+			behavior: 'smooth'
+		  }); 
+	}
+	 else if (window.matchMedia("(max-width:1024px)").matches) {
+		window.scrollTo({
+			top: 2070,
+			behavior: 'smooth'
+		  }); 
+	 }
+
+	 else {
+		window.scrollTo({
+			top: 1880,
+			behavior: 'smooth'
+		  });    
+	 }
+
 }
 
 function scrollToCompetences() {
-	window.scrollTo({
-		top: 2625,
-		behavior: 'smooth'
-	  });    
+	if (window.matchMedia("(max-width:767px)").matches) {
+		window.scrollTo({
+			top: 6000,
+			behavior: 'smooth'
+		  }); 
+	}
+	 else if (window.matchMedia("(max-width:1024px)").matches) {
+		window.scrollTo({
+			top: 2070,
+			behavior: 'smooth'
+		  }); 
+	 }
+
+	 else {
+		window.scrollTo({
+			top: 1880,
+			behavior: 'smooth'
+		  });    
+	 }
 }
 
 function scrollToService() {
-	window.scrollTo({
-		top: 1145,
-		behavior: 'smooth'
-	  });    
+	if (window.matchMedia("(max-width:767px)").matches) {
+		window.scrollTo({
+			top: 6000,
+			behavior: 'smooth'
+		  }); 
+	}
+	 else if (window.matchMedia("(max-width:1024px)").matches) {
+		window.scrollTo({
+			top: 2070,
+			behavior: 'smooth'
+		  }); 
+	 }
+
+	 else {
+		window.scrollTo({
+			top: 1880,
+			behavior: 'smooth'
+		  });    
+	 }  
 }
 
 
 function scrollDown() {
-        //var element = document.getElementById("a-propos");;
+	if (window.matchMedia("(max-width:767px)").matches) {
 		window.scrollTo({
-			top: 600,
+			top: 6000,
+			behavior: 'smooth'
+		  }); 
+	}
+	 else if (window.matchMedia("(max-width:1024px)").matches) {
+		window.scrollTo({
+			top: 2070,
+			behavior: 'smooth'
+		  }); 
+	 }
+
+	 else {
+		window.scrollTo({
+			top: 1880,
 			behavior: 'smooth'
 		  });    
+	 }
 }
 
 // ANIMATION NAV BAR
@@ -119,11 +197,9 @@ window.onscroll = () => {
 
 	if (window.scrollY > 200) {
 		aProposBlock.classList.add('anim-a-propos');
-	
 	}
 
 	if (window.scrollY > 2300) {
-		console.log("ok");
 		barJS.classList.add('animation-bar-js');
 		barHTML.classList.add("animation-bar-html");
 		barPHP.classList.add("animation-bar-php");

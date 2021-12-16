@@ -1,0 +1,128 @@
+@media screen and (max-width:1024px) {
+	.large-nav-menu {
+		//display: none;
+	}
+
+	.small-nav-menu {
+		display: none;
+		justify-content: space-between;
+		align-items: center;
+		padding: 0.7em 1.8em;
+		z-index: 1000;
+		position: fixed;
+		top: 0px;
+		width: 100%;
+		background-color: white;
+		box-shadow: #2222881a 2px 3px 3px 3px;
+		
+	}
+	//BANNER
+	
+	.banner {
+		padding: 5em 3.5em 0em 3.5em;
+		height: 430px;
+		min-height: 400px;
+	}
+
+	#text-banner {
+		font-size: 2em;
+	}
+
+	.portrait-banner {
+		width: 30%;
+	}
+
+	.planete-1 {
+		width: 80px;
+	}
+
+	.planete-2 {
+		bottom: 7%;
+		width: 40px;
+		right: 6%;
+	}
+
+	.chien {
+		width: 160px;
+	}
+
+	//A PROPOS
+
+	.a-propos {
+		padding: 3em 7em;
+		opacity: 1;
+
+		p{
+			font-size: 1em;
+		}
+		h2 {
+			margin-bottom: 2em;
+		}
+	}
+
+	.anim-a-propos {
+		animation: none;
+	}
+
+	//SERVICES
+
+	.services {
+		height: 1060px
+	}
+
+	.services-ronds-container {
+		width: 94%;
+		justify-content: center;
+	}
+
+	.card-service {
+		width: 40%;
+		height: 310px;
+		margin-bottom: 5em;
+		margin-right: 1.5em;
+		margin-left: 1.5em;
+	}
+
+
+	//PORTFOLIO
+
+	.webDev-portfolio, .WebDesign-portfolio {
+		grid-template-columns: repeat(2, 47%);
+	}
+
+	.card-portfolio {
+		max-height: 200px;
+		margin-bottom: 2em;
+	}
+
+	//SKILLS
+
+	.skills-container {
+		width: 80%;
+	}
+
+	//POPUP 
+
+	#pop-up {
+		margin-top: 20%;
+		max-height: 750px;
+		right: 3em;
+		left: 3em;
+	}
+
+	.img-omf-container {
+		box-shadow: none;
+		overflow-y: scroll;	
+	
+		
+	
+		img {
+			margin-right: 10px;
+			max-height: 300px;
+			width: auto;
+		}
+	}	
+}
+
+
+

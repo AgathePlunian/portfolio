@@ -2,11 +2,11 @@
 	height: 590px;
     min-height: 590px;
     background-color: $primary-color;
-    padding: 7em 10em 5em 5em;
+    padding: 7em 9em 5em 5em;
     position: relative;
     display: flex;
     justify-content: space-between;
-    margin-top: 9vh;
+    margin-top: 55px;
 }
 
 .arrow-down {
@@ -54,7 +54,8 @@
 }
 
 .portrait-banner {
-    width: 320px;
+    max-width: 400px;
+    width: 33%;
     transform: translatey(0px);
 	animation: float 6s ease-in-out infinite;
 }

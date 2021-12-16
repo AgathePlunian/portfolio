@@ -1,0 +1,309 @@
+@media screen and(max-width:767px){
+//BANNER 
+	.banner {
+		flex-flow: column;
+		padding: 4em 2em 1em 2em;
+		height:560px;
+		justify-content: flex-start;
+		align-items: center;
+	}
+
+	.portrait-banner {
+		width: 50%;
+		order: 1;
+		margin-bottom: 1.6em;
+		max-width: 200px;
+	}
+
+	#text-banner {
+		order: 2;
+		text-align: center;
+	}
+
+	#text-banner {
+		font-size: 1.5em;
+	}
+
+	.planete-1 {
+		top: 6%;
+		right: 4%;
+		width: 80px;
+	}
+
+	.planete-3 {
+		left: 6%;
+		top: 25%;
+	}
+
+	.planete-4 {
+		top: 33%;
+		right: 13%;
+	}
+
+	.etoile-4 {
+		display: none;
+	}
+	
+	.arrow-down {
+		bottom: -1em;
+	}
+
+	.etoile-1 {
+		opacity: 0.7;
+		left: 7%;
+		width: 5px;
+		height: 5px;
+		animation: none;
+	}
+
+	.etoile-2 {
+		animation: none;
+		width: 7px;
+		height: 7px;
+		top: 10%;
+	}
+
+	.etoile-3 {
+		display: none;
+	}
+
+	.etoile-5 {
+		display: none;
+	}
+
+	.etoile-6 {
+		animation: none;
+		width: 10px;
+		height: 10px;
+		right: 10%;
+	}
+
+	.etoile-7 {
+		animation: none;
+		width: 8px;
+		height: 8px;
+		bottom: 15%;
+	}
+
+	.etoile-8 {
+		display: none;
+	}
+
+	.etoile-9 {
+		display: none;
+	}
+
+	.etoile-10 {
+		left: 5%;
+		animation: none;
+		opacity: 0.6;
+	}
+
+	.etoile-11 {
+		display: none;
+	}
+
+	.chien {
+		width: 130px;
+		bottom: 10%;
+	}
+
+	//A PROPOS
+	.a-propos {
+		height: 580px;
+		padding: 2em 2em;
+		h2 {
+			font-size: 2.2em;
+			margin-bottom: 1em;
+		}
+	}
+
+	.rond-a-propos {
+		width: 250px;
+		height: 250px;
+
+	}
+
+	//SERVICES 
+
+	.services {
+		padding: 2em 2em;
+		height: 1400px;
+
+		h2 {
+			font-size: 2.2em;
+		}
+	}
+
+	.services-ronds-container  {
+		width: 100%;
+	}
+
+	.card-service {
+		width: 100%;
+		margin-bottom: 6em;
+		margin-left: 0;
+		margin-right: 0;
+	}
+
+
+	//PORTFOLIO
+	.mes-travaux {
+		padding: 2em 0.8em;
+
+		h2 {
+			font-size: 2.2em;
+		}
+	}
+
+	.works-nav {
+		width: 335px;
+		margin: 0 auto;
+		margin-bottom: 2em;
+	}
+
+	.btn-choice {
+		font-size: 14px;
+		padding: 0;
+	}
+
+
+	#bg-menu-works {
+		top: 3px;
+		bottom: 3px;
+		border-radius: 15px;
+		z-index: -1000;
+	}
+
+
+	.bg-menu-dev {
+		right: 181px;
+		left: 3px;
+	}
+
+	.bg-menu-design {
+		right: 87px;
+		left: 151px;
+	}
+
+	.bg-menu-illu {
+		right: 3px;
+		left: 245px; 
+	}
+
+
+	@keyframes designToIllu { 
+		0% { 
+			right: 113px;
+			left: 187px;;
+		}
+
+		100% { 
+			right: 3px;
+			left: 245px;  
+		}
+	}
+
+
+	@keyframes illuToDesign { 
+		0% { 
+			right: 3px;
+			left: 245px; 
+		}
+
+		100% { 
+			right: 87px;
+			left: 151px; 
+		}
+	}
+
+
+	@keyframes devToIllu { 
+		0% { 
+			right: 181px;
+			left: 3px;
+		}
+
+		100% { 
+			right: 3px;
+			left: 245px; 
+		}
+	}
+
+	@keyframes devToDesign{ 
+		0% { 
+			right: 181px;
+			left: 3px;
+		}
+
+		100% { 
+			right: 87px;
+			left: 151px; }
+	}
+
+	@keyframes designToDev { 
+		0% { 
+			right: 87px;
+			left: 151px;
+		}
+
+		100% { 
+			right: 181px;
+			left: 3px;
+		}
+	}
+
+	@keyframes illuToDev { 
+		0% { 
+			right: 3px;
+			left: 245px; 
+		}
+
+		100% { 
+			right: 181px;
+			left: 3px;
+		}
+	}
+
+	.webDev-portfolio, .WebDesign-portfolio {
+		grid-template-columns: repeat(1, 100%);
+	}
+
+	.container-illustrations {
+		display: block;
+	}
+
+	.one, .two, .three, .four, .five , .six , .seven , .eight {
+		width: 100%;
+		max-height:	fit-content;
+
+		img {
+			width: 100%;
+		}
+	}
+
+	//SKILLS
+
+	.skills {
+		padding: 2em 2em;
+
+		h2 {
+			font-size: 2.2em;
+			margin-bottom: 1em;
+		}
+	}
+
+	.title-skills {
+		font-size: 1.1em;
+		text-align: center;
+	}
+
+	.skills-container {
+		width: 100%;
+		padding: 1em;
+	}
+
+	.bg-bar {
+		height: 10px;
+	}
+}

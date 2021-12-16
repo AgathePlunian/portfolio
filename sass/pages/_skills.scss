@@ -1,12 +1,17 @@
 .skills {
 	padding-top: 3em;
 	padding-bottom: 2em;
-	background-color: $bg-violet;
+	//background-color: $bg-violet;
+	background-color: rgba(193, 204, 253, 0.356);
 	
 	h2 {
 		color: $primary-color;
 		text-align: center;
 		margin-bottom: 2em;
+	}
+
+	.btn {
+		margin: auto;
 	}
 }
 
@@ -22,7 +27,7 @@
 
 .title-skills {
 	color: $primary-color;
-	font-weight: 300;
+	font-weight: 600;
 	margin-bottom: 0.7em;
 
 	
@@ -53,8 +58,7 @@
 	top: 0;
 	left: 0;
 	bottom: 0;
-	background-color: $pink;
-	
+	background-color: #222288d0;
 	
 }
 
@@ -161,5 +165,5 @@
 
 
 .photoshop, .indesign, .illustrator, .adobeXD, .figma {
-	background-color: $light-violet;
+	background-color: $pink;
 }

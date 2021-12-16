@@ -140,7 +140,7 @@ function showPopup(event) {
 
 				
 			<div class="text-popup">
-				<h1 class="pop-up-title">Front end du site FicheEye</h1>
+				<h1 class="pop-up-title">Front end du site FishEye</h1>
 				<p class="pop-up-p">Projet réalisé dans le cadre de ma formation OpenClassrooms de développeuse front-end.</p>
 				<p class="little-title-popup">Année</p><p class="pop-up-p">2021</p>
 				<p class="little-title-popup">Mission</p><p class="pop-up-p">Création d'un site accessible pour une plateforme de photographes à partir de maquettes.</p>
