@@ -1,14 +1,17 @@
 @media screen and (max-width:1024px) {
+
+	//NAVBAR
 	.large-nav-menu {
 		display: none;
 	}
 
 	.small-nav-menu {
+		height: 65px;
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
 		padding: 0.7em 1.4em;
-		z-index: 1000;
+		z-index: 1;
 		position: fixed;
 		top: 0px;
 		width: 100%;
@@ -18,18 +21,74 @@
 
 	.small-menu-list  {
 		position: fixed;
-		top: 60px;
-		bottom: 0;
+		top: 65px;
 		right: 0;
 		left: 0;
-		background-color: $primary-color;
+		background-color:#d4d4f1;;
 		z-index: 2;
 		padding: 3em 2em;
+		height: 100vh;
+		transition: height 0.2s linear;
+		
+		ul {
+			height: fit-content;
+			transition: height 0.400s linear;
+			padding-top: 2em;
+			position: relative;
+			opacity: 0;
+			animation: menuToggleClose 400ms forwards;
+			overflow: hidden;
+		}
 
 		li {
-			color: white;
+			text-align: center;
+			color: $primary-color;
+			font-size: 2em;
+			margin-bottom: 1em;
+			font-weight: 500;
+		}
+
+	}
+	@keyframes menuToggleClose{ 
+		0% { 
+			opacity: 0;
+			bottom: 0em; 
+		}
+	
+		100% { 
+			opacity: 1;
+			bottom: -2em
+			}
+	}
+
+	@keyframes menuToggleOpen{ 
+		0% { 
+			opacity: 1;
+			bottom: -5em;
+		}
+	
+		100% { 
+			opacity: 0;
+			bottom: 0em; }
+	}
+
+	.display-none-menu {
+		z-index: -1000;
+		padding: 0;
+		height: 0px; 
+		transition: height 0.3s  linear;
+		
+		ul {
+			transition: height 0.400s linear;
+			height: 0px;
+			opacity: 0;
+			animation: menuToggleOpen 300ms forwards;
+		
 		}
 	}
+
+	
+	
 	//BANNER
 	
 	.banner {
@@ -109,6 +168,10 @@
 		margin-bottom: 2em;
 	}
 
+	.one, .two, .three, .four, .five , .six , .seven , .eight { 
+		max-height: 200px;
+	}
+
 	//SKILLS
 
 	.skills {
@@ -120,8 +183,8 @@
 
 	//POPUP 
 
-	#pop-up {
-		margin-top: 20%;
+	.pop-up {
+		margin-top: 1%;
 		max-height: 750px;
 		right: 3em;
 		left: 3em;
@@ -143,9 +206,10 @@
 
 	//BURGER MENU
 
-#nav-icon3 {
+#burger-menu {
+	margin-top: 10px;
 	width: 40px;
-	height: 10px;
+	height: 35px;
 	position: relative;
 	-webkit-transform: rotate(0deg);
 	-moz-transform: rotate(0deg);
@@ -158,7 +222,7 @@
 	cursor: pointer;
   }
   
-	#nav-icon3 span {
+	#burger-menu span {
 	display: block;
 	position: absolute;
 	height: 4px;
@@ -177,41 +241,41 @@
 	transition: .25s ease-in-out;
   }
   
-  /* Icon 3 */
+  // burger-menu 
   
-  #nav-icon3 span:nth-child(1) {
-	top: -6px;
+  #burger-menu span:nth-child(1) {
+	top: 0px;
   }
   
-  #nav-icon3 span:nth-child(2),#nav-icon3 span:nth-child(3) {
-	top: 6px;
+  #burger-menu span:nth-child(2),#burger-menu span:nth-child(3) {
+	top: 12px;
   }
   
-  #nav-icon3 span:nth-child(4) {
-	top: 18px;
+  #burger-menu span:nth-child(4) {
+	top: 24px;
   }
   
-  #nav-icon3.open span:nth-child(1) {
+  #burger-menu.open span:nth-child(1) {
 	top: 18px;
 	width: 0%;
 	left: 50%;
   }
   
-  #nav-icon3.open span:nth-child(2) {
+  #burger-menu.open span:nth-child(2) {
 	-webkit-transform: rotate(45deg);
 	-moz-transform: rotate(45deg);
 	-o-transform: rotate(45deg);
 	transform: rotate(45deg);
   }
   
-  #nav-icon3.open span:nth-child(3) {
+  #burger-menu.open span:nth-child(3) {
 	-webkit-transform: rotate(-45deg);
 	-moz-transform: rotate(-45deg);
 	-o-transform: rotate(-45deg);
 	transform: rotate(-45deg);
   }
   
-  #nav-icon3.open span:nth-child(4) {
+  #burger-menu.open span:nth-child(4) {
 	top: 18px;
 	width: 0%;
 	left: 50%;

@@ -1,6 +1,6 @@
 .form-contact {
 	//background-color: rgba(255, 192, 192, 0.171);
-	background-color: rgba(212, 208, 224, 0.158);
+	background-color: rgba(231, 224, 235, 0.158);
 	padding: 4em 7em;
 	margin: 0 auto;
 
@@ -12,13 +12,13 @@
 
 .form-section {
 	display: flex;
-	justify-content: center
+	justify-content: space-between;
 }
 
 .text-form {
-	text-align: center;
+	
 	margin-bottom: 2em;
-	width: 100%;
+	width: 40%;
 	p {
 		font-size: 1.1em;
 	}
@@ -26,7 +26,7 @@
 }
 
 .formulaire {
-	width: 58%;
+	width: 55%;
 }
 
 .form-input {

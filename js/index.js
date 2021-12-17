@@ -4,18 +4,20 @@ document.addEventListener('DOMContentLoaded',function(event){
   
 	//ANIMATION BURGER MENU
 	let menuToggle = document.getElementById("toggle-menu");
-	let burgerMenu = document.getElementById("nav-icon3");
+	let burgerMenu = document.getElementById("burger-menu");
 	
-	burgerMenu.addEventListener('click' , function () {
-		if(this.classList.contains("open")) {
-			this.classList.remove("open");
-			menuToggle.classList.add("display-none");
-		}
-		else {
-			this.classList.add("open");
-			menuToggle.classList.remove("display-none");
-		}
-	})
+	
+		burgerMenu.addEventListener('click' , function () {
+			if(this.classList.contains("open")) {
+				this.classList.remove("open");
+				menuToggle.classList.add("display-none-menu");
+			}
+			else {
+				this.classList.add("open");
+				menuToggle.classList.remove("display-none-menu");
+			}
+		})
+	
 	
 
 // ANIMATION TEXT BANNER

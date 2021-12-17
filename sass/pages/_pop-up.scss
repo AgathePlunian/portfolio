@@ -1,10 +1,10 @@
-#pop-up {
+.pop-up {
 	z-index: 3010;
 	position: absolute;
 	background-color: white;
-	top: -2em;
+	top: 0;
 	height: fit-content;
-	max-height: 550px;
+	max-height: 575px;
 	right: 8em;
 	left: 8em;
 	padding: 1.3em 2em 2em 2em;
@@ -25,7 +25,7 @@
 
     100% { 
 		opacity: 1; 
-		top: 5em;}
+		top: 2em;}
 }
 
 .pop-up-display-none-anim {
@@ -39,7 +39,7 @@
 @keyframes popUpdisappear{ 
     0% { 
 		opacity: 1;
-		top: 5em;
+		top: 2em;
 	}
 
     100% { 
@@ -65,6 +65,7 @@
 }
 
 .bg-pop-up {
+	overflow: scroll;
  	z-index: 2000;
 	position: fixed;
 	top: 0;
@@ -98,14 +99,14 @@
 .img-shadow {
 	margin-bottom: 1em;
 	border-radius: 5px;
-	box-shadow: 0 5px 10px 0 rgba(72, 72, 100, 0.288);
+	box-shadow: 0 5px 15px 5px rgba(72, 72, 100, 0.288);
 }
 
 .img-popup {
 	width: 31%;
 	border-radius: 5px;
 	overflow: hidden;
-	box-shadow: 0 5px 10px 0 rgba(72, 72, 100, 0.288);
+	box-shadow: 0 5px 15px 5px rgba(72, 72, 100, 0.288);
 	margin-right: 1.5em;
 	max-height: 470px;
 	height: fit-content;
@@ -115,6 +116,22 @@
 	}
 	
 }
+
+
+.img-popup-design {
+	width: fit-content;
+	max-height: 500px;
+
+	img {
+		height: 500px;
+		width: 200px;
+	}
+}
+
+.text-popup-design {
+	width: 60%;
+}
+
 
 .img-omf-container {
 	box-shadow: none;
@@ -129,12 +146,12 @@
 
 	&::-webkit-scrollbar {
 		-webkit-appearance: none;
-		width: 14px;
+		width: 13px;
 	  }
 	&::-webkit-scrollbar-thumb {
-		background-color: rgba(66, 65, 124, 0.685); /* color of the scroll thumb */
+		background-color: rgba(192, 192, 192, 0.685); /* color of the scroll thumb */
 		border-radius: 20px; /* roundness of the scroll thumb */
-		border: 3px solid rgb(240, 240, 240); /* creates padding around scroll thumb */
+		border: 2px solid rgb(240, 240, 240); /* creates padding around scroll thumb */
 	  
 	  }
 	&::-webkit-scrollbar-track {
@@ -194,4 +211,36 @@
 .avoid {
 	pointer-events: none;
 
+}
+
+.pop-up-illustration {
+	z-index: 3010;
+	position: absolute;
+	background-color: white;
+	top: 0;
+	height: fit-content;
+	max-height: 590px;
+	right: 17em;
+	left: 17em;
+	padding: 2em 4em;
+	border-radius: 20px;
+	box-shadow: 0 5px 20px 0 rgba(153, 153, 179, 0.479);
+	overflow: scroll;
+
+
+	.close-container {
+		position: relative;
+		right: -20px;
+		top: -15px;
+	}
+
+	.illustration-popup-container {
+		margin: auto;
+		width: 85%;
+	}
+
+	img {
+		
+		border-radius: 5px;
+	}
 }

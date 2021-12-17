@@ -310,7 +310,7 @@
 
 	//POPUP 
 
-	#pop-up {
+	.pop-up {
 		margin: 0;
 		top: -10em;
 		right: 0.5em;
@@ -320,9 +320,29 @@
 	}
 
 	.popup-flex {
+		display: block;
+		
+	}
+	
+	.popup-flex-design {
 		display: flex;
-		flex-flow: column;
-		overflow: hidden;
+
+		.img-popup-design {
+			width: 40%;
+			max-width: fit-content;
+			max-height: fit-content;
+			margin-right: 1.5em;
+
+			img {
+				width: 100%;
+				height: auto;
+			}
+		}
+
+		.text-popup-design {
+			width: 58%;
+			justify-content: start;
+		}
 	}
 
 	.img-omf-container {
@@ -346,14 +366,37 @@
 	}
 
 	.img-popup {
-		width: 100%;
+		width: 95%;
 		margin-bottom: 2em;
 		max-height: 200px;
-		margin-top: 1em;
+		margin: 1em auto 2em auto;
 	}
 
 	.text-popup {
 		width: 100%;
 
 	}
+
+	.imgs-container-popup {
+		margin: auto;
+		width: 95%;
+		padding: 0.5em;
+		display: flex;
+		flex-flow: row;
+		justify-content: space-between;
+	
+		img {
+			width: 49%;
+		}
+	}
+
+	.illustration-portfolio {
+		cursor: inherit;
+		&:hover {
+			.hover-card-illustration {
+				display: none;
+			}
+		}
+	}
+	
 }

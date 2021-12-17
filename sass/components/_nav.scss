@@ -9,12 +9,8 @@
 	width: 100%;
 	background-color: white;
 	box-shadow: #2222881a 2px 3px 3px 3px;
-	height: 55px;
-	max-height: 55px;
-}
-
-.small-nav-menu {
-	display: none;
+	height: 65px;
+	max-height: 65px;
 }
 
 .nav-active {
@@ -33,11 +29,10 @@
 }
 
 .nav-item {
-	font-size: 9px;
-	//font-size: 16px;
+	font-size: 1em;
 	margin-left: 30px;
 	color: $primary-color;
-	font-weight: 600;
+	font-weight: 500;
 	cursor: pointer;
 
 	&:hover {
@@ -49,3 +44,6 @@
 	width: 40px;
 }
 
+.small-nav-menu {
+	display: none;
+}

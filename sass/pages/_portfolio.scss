@@ -55,6 +55,36 @@
 
 }
 
+.illustration-portfolio {
+	position: relative;
+	&:hover {
+		.hover-card-illustration {
+			display: flex;
+		}
+	}
+}
+
+.hover-card-illustration {
+	background-color: $primary-color;
+	opacity: 0.9;
+	position: absolute;
+	top: 0;
+	right: 0;
+	left: 0;
+	bottom: 0;
+	border-radius: 8px;
+	display: none;
+	flex-flow: column;
+	justify-content:center;
+	align-items: center;
+	cursor: pointer;
+}
+
+.loupe {
+	width: 35px!important;
+	height: 35px!important;
+}
+
 .card-portfolio {
 	position: relative;
 	border-radius: 8px;

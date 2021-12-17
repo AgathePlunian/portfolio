@@ -33,23 +33,25 @@
 
             <div class="small-nav-menu display-none" id="full-screen">
                 <div class="logo-container"><img src="img/banner/portrait-Agathe-Plunian.png"></div>
-                <div id="nav-icon3">
+                <div id="burger-menu">
                     <span></span>
                     <span></span>
                     <span></span>
                     <span></span>
+                </div>
+
+                <div id="toggle-menu" class="small-menu-list display-none-menu">
+                    <ul> 
+                        <li>À propos</li>
+                        <li>Mes services</li>
+                        <li>Mes travaux</li>             
+                        <li>Compétences</li>
+                        <li>Contact</li>
+                    </ul> 
                 </div>
             </div>
 
-            <div id="toggle-menu" class="small-menu-list display-none">
-                <ul> 
-                    <li>À propos</li>
-                    <li>Mes services</li>
-                    <li>Mes travaux</li>             
-                    <li>Compétences</li>
-                    <li>Contact</li>
-                </ul> 
-                </div>
+            
         </nav>
     
         <!--BANNER-->
@@ -145,7 +147,7 @@
         <div class="mes-travaux">
 
             <div class="bg-pop-up pop-up-display-none">
-                <div id="pop-up" class="pop-up-display-none"></div>
+                <div class="pop-up" class="pop-up-display-none"></div>
             </div>
 
             <h2>Mes travaux</h2>
@@ -163,14 +165,46 @@
                 <!--PORTFOLIO ILLUSTRATIONS-->
                 <div class="display-none illustrations">
                     <div class="container-illustrations">
-                        <div class="one"><img src="img/portfolio/Illustrations/feu.png" alt="Illustration feu de camp"></div>
-                        <div class="two"><img src="img/portfolio/Illustrations/croco-enfant.png" alt="Illustration enfant sur crocodile"></div>
-                        <div class="three"><img src="img/portfolio/Illustrations/cerf-v.jpeg" alt="Illustration petite fille avec cerf-volant"></div>
-                        <div class="four"><img src="img/portfolio/Illustrations/orage.jpeg" alt="Illustration petit vieux avec chien sous la pluie"></div>
-                        <div class="five"><img src="img/portfolio/Illustrations/espace.jpg" alt="Personnages sur dragon dans l'espace"></div>
-                        <div class="six"><img src="img/portfolio/Illustrations/lama.jpeg" alt="Petite fille avec son lama dans la montagne"></div>
-                        <div class="seven"><img src="img/portfolio/Illustrations/inuit.png" alt="Enfant inuit avec chien qui pèche du poisson"></div>
-                        <div class="eight"><img src="img/portfolio/Illustrations/nuit.png" alt="Image de nuit"></div>
+                        <div class="one illustration-portfolio"><img src="img/portfolio/Illustrations/feu.png" alt="Illustration feu de camp">
+                            <div class="hover-card-illustration">
+                                <img class="avoid loupe" src="img/picto/icone-loupe.png" alt="zoom sur l'illustration">
+                            </div>
+                        </div>
+                        <div class="two illustration-portfolio"><img src="img/portfolio/Illustrations/croco-enfant.png" alt="Illustration enfant sur crocodile">
+                            <div class="hover-card-illustration">
+                                <img class="avoid loupe" src="img/picto/icone-loupe.png">
+                            </div>
+                        </div>
+                        <div class="three illustration-portfolio"><img src="img/portfolio/Illustrations/cerf-v.jpeg" alt="Illustration petite fille avec cerf-volant">
+                            <div class="hover-card-illustration">
+                                <img class="avoid loupe" src="img/picto/icone-loupe.png">
+                            </div>
+                        </div>
+                        <div class="four illustration-portfolio"><img src="img/portfolio/Illustrations/orage.jpeg" alt="Illustration petit vieux avec chien sous la pluie">
+                            <div class="hover-card-illustration">
+                                <img class="avoid loupe" src="img/picto/icone-loupe.png">
+                            </div>
+                        </div>
+                        <div class="five illustration-portfolio"><img src="img/portfolio/Illustrations/espace.jpg" alt="Personnages sur dragon dans l'espace">
+                            <div class="hover-card-illustration">
+                                <img class="avoid loupe" src="img/picto/icone-loupe.png">
+                            </div>
+                        </div>
+                        <div class="six illustration-portfolio"><img src="img/portfolio/Illustrations/lama.jpeg" alt="Petite fille avec son lama dans la montagne">
+                            <div class="hover-card-illustration">
+                                <img class="avoid loupe" src="img/picto/icone-loupe.png">
+                            </div>
+                        </div>
+                        <div class="seven illustration-portfolio"><img src="img/portfolio/Illustrations/inuit.png" alt="Enfant inuit avec chien qui pèche du poisson">
+                            <div class="hover-card-illustration">
+                                <img class="avoid loupe" src="img/picto/icone-loupe.png">
+                            </div>
+                        </div>
+                        <div class="eight illustration-portfolio"><img src="img/portfolio/Illustrations/nuit.png" alt="Image de nuit">
+                            <div class="hover-card-illustration">
+                                <img class="avoid loupe" src="img/picto/icone-loupe.png">
+                            </div>
+                        </div>
                     </div>
                     <div>
                         <p class="link-insta-illu">Et plus encore sur mon <a class="link" href="https://www.instagram.com/agatheplunianillustration/">Instagram</a> !</p>
@@ -180,23 +214,23 @@
                 <!--PORTFOLIO WEB DESIGN-->
                 <div class="WebDesign-portfolio display-none">
                     <div class="card-portfolio resileyes"><img src="img/portfolio/Webdev/resileyes.png" alt="card site ResilEyes">
-                        <div class="hover-card">
-                            <p class="title-hover">Site vitrine ResilEyes</p>
-                            <div class="see-more-container">
-                                <p class="see-more">En voir plus</p>
-                                <img src="img/picto/arrow-right.png">
+                        <a id="wdesign-resileyes" class="hover-card">
+                            <p class="title-hover avoid">Site vitrine ResilEyes</p>
+                            <div class="see-more-container avoid">
+                                <p class="see-more avoid">En voir plus</p>
+                                <img class="avoid" src="img/picto/arrow-right.png">
                             </div>
-                        </div>
+                        </a>
                     </div>
 
                     <div class="card-portfolio maquette-e-commerce"><img src="img/portfolio/WebDesign/maquette-e-commerce.jpg" alt="card site e-commerce">
-                        <div class="hover-card">
-                            <p class="title-hover">Maquette site e-commerce</p>
-                            <div class="see-more-container">
-                                <p class="see-more">En voir plus</p>
-                                <img src="img/picto/arrow-right.png">
+                        <a id="wdesign-ecommerce" class="hover-card">
+                            <p class="title-hover avoid">Maquette site e-commerce</p>
+                            <div class="see-more-container avoid">
+                                <p class="see-more avoid">En voir plus</p>
+                                <img class="avoid" src="img/picto/arrow-right.png">
                             </div>
-                        </div>
+                        </a>
                     </div>
                 </div>
 
@@ -321,12 +355,12 @@
 
         <section class="form-contact">
             <h2>Me contacter</h2>
-            <div class="text-form">
-                <p>N'hésitez pas à mon contacter via ce formulaire, ou par  <a class="link" href="mailto:agathe.plunian@gmail.com">mail</a>  &#128522; ! </p>
-            </div>
+            
 
             <div class="form-section">
-
+                <div class="text-form">
+                    <p>N'hésitez pas à mon contacter via ce formulaire, ou par  <a class="link" href="mailto:agathe.plunian@gmail.com">mail</a>  &#128522; ! </p>
+                </div>
             
                 <form class="formulaire" action="form.php" method="post">
 
