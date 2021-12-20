@@ -286,6 +286,7 @@
 
 	.skills {
 		padding: 2em 2em;
+		height: 980px;
 
 		h2 {
 			font-size: 2.2em;
@@ -396,6 +397,15 @@
 			.hover-card-illustration {
 				display: none;
 			}
+		}
+	}
+
+	//CONTACT
+
+	.form-contact {
+		padding: 2em 2em;
+		h2 {
+			font-size: 2.2em;
 		}
 	}
 	

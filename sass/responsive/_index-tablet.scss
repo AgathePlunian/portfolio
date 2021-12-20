@@ -46,6 +46,7 @@
 			font-size: 2em;
 			margin-bottom: 1em;
 			font-weight: 500;
+			cursor: pointer;
 		}
 
 	}
@@ -281,7 +282,53 @@
 	left: 50%;
   }
   
+
+  //CONTACT 
+
+  .form-contact {
+	  h2 {
+		  margin-bottom: 0.5em;
+	  }
+  }
+
+  .form-section {
+	  display: block;
+  }
+
+  .text-form {
+	  width: 100%;
+
+	  p {
+		  text-align: center;
+	  }
+  }
+
+  .formulaire {
+	  width: 100%;
+	  display: flex;
+	  flex-flow: column;
+	  align-items: center;
+  }
+
+  .names-input {
+	  width: 100%;
+  }
+
+  .form-input {
+	  width: 100%;
+  }
+
+  .illu-contact {
+	  width: 70%;
+	  margin: 2em auto 2em auto;
+  }
+
+  .submit-message {
+	width: fit-content;
+  }
 }
+
+
 
 
 

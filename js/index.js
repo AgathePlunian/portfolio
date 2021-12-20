@@ -57,141 +57,149 @@ document.addEventListener('DOMContentLoaded',function(event){
 			typeWriter(currentText ,line, j)
 		}
 	}	
-
  
 	 StartTextAnimation(i);
 
 });
 
 // NAV LINK ET FLECHE BANNER
+const logo = document.getElementsByClassName("logo-container");
+for(let i = 0; i < logo.length; i++) {
+	logo[i].addEventListener('click', scroolToTop);
+}
+
 const navAPropos = document.getElementById("nav-a-propos"); 
 const navService = document.getElementById("nav-services");
 const navPortfolio = document.getElementById("nav-portfolio");
 const navCompetence = document.getElementById("nav-competences");
 const navContact = document.getElementById("nav-contact");
 
-const arrowDown = document.getElementById("arrow-down");
-arrowDown.addEventListener('click' , scrollDown);
-navAPropos.addEventListener('click' , scrollDown);
+const snavAPropos = document.getElementById("s-nav-a-propos"); 
+const snavService = document.getElementById("s-nav-services");
+const snavPortfolio = document.getElementById("s-nav-portfolio");
+const snavCompetence = document.getElementById("s-nav-competences");
+const snavContact = document.getElementById("s-nav-contact");
 
+const arrowDown = document.getElementById("arrow-down");
+
+arrowDown.addEventListener('click' , scrollDown);
+
+navAPropos.addEventListener('click' , scrollToAPropos);
 navService.addEventListener('click' , scrollToService);
 navPortfolio.addEventListener('click' , scrollToPorfolio);
 navCompetence.addEventListener('click', scrollToCompetences)
-navContact.addEventListener('click', scrollToContact)
+navContact.addEventListener('click', scrollToContact);
+
+snavAPropos.addEventListener('click' , scrollToAPropos);
+snavService.addEventListener('click' , scrollToService);
+snavPortfolio.addEventListener('click' , scrollToPorfolio);
+snavCompetence.addEventListener('click', scrollToCompetences)
+snavContact.addEventListener('click', scrollToContact);
+
+function scroolToTop() {
+	window.scrollTo({
+		top : 0,
+		behavior: 'smooth'
+	});
+}
+
+function scrollToAPropos() {
+
+	let offsetsAPropos = document.getElementsByClassName("a-propos")[0].getBoundingClientRect();
+	var topAPropos = offsetsAPropos.top + document.documentElement.scrollTop -65;
+
+	let menuToggle = document.getElementById("toggle-menu");
+	let burgerMenu = document.getElementById("burger-menu");
+	burgerMenu.classList.remove("open");
+	menuToggle.classList.add("display-none-menu");
+
+	window.scrollTo({
+		top: topAPropos,
+		behavior: 'smooth'
+	}); 
+}
 
 function scrollToContact() {
-	if (window.matchMedia("(max-width:767px)").matches) {
-		window.scrollTo({
-			top: 6000,
-			behavior: 'smooth'
-		  }); 
-	}
-	 else if (window.matchMedia("(max-width:1024px)").matches) {
-		window.scrollTo({
-			top: 3900,
-			behavior: 'smooth'
-		  }); 
-	 }
 
-	 else {
-		window.scrollTo({
-			top: 3800,
-			behavior: 'smooth'
-		  }); 
-	 }
+	let offsetsContact = document.getElementsByClassName("form-contact")[0].getBoundingClientRect();
+	var topContact = offsetsContact.top + document.documentElement.scrollTop - 65;
+
+	let menuToggle = document.getElementById("toggle-menu");
+	let burgerMenu = document.getElementById("burger-menu");
+	burgerMenu.classList.remove("open");
+	menuToggle.classList.add("display-none-menu");
+
+	window.scrollTo({
+		top: topContact,
+		behavior: 'smooth'
+	}); 
 }
 
 function scrollToPorfolio() {
-	if (window.matchMedia("(max-width:767px)").matches) {
-		window.scrollTo({
-			top: 2550,
-			behavior: 'smooth'
-		  }); 
-	}
-	 else if (window.matchMedia("(max-width:1024px)").matches) {
-		window.scrollTo({
-			top: 2070,
-			behavior: 'smooth'
-		  }); 
-	 }
 
-	 else {
-		window.scrollTo({
-			top: 1880,
-			behavior: 'smooth'
-		  });    
-	 }
+	let offsetPortfolio = document.getElementsByClassName("mes-travaux")[0].getBoundingClientRect();
+	var topPortfolio = offsetPortfolio.top + document.documentElement.scrollTop -65;
+
+	let menuToggle = document.getElementById("toggle-menu");
+	let burgerMenu = document.getElementById("burger-menu");
+	burgerMenu.classList.remove("open");
+	menuToggle.classList.add("display-none-menu");
+
+	window.scrollTo({
+		top: topPortfolio,
+		behavior: 'smooth'
+	}); 
 
 }
 
 function scrollToCompetences() {
-	if (window.matchMedia("(max-width:767px)").matches) {
-		window.scrollTo({
-			top: 6000,
-			behavior: 'smooth'
-		  }); 
-	}
-	 else if (window.matchMedia("(max-width:1024px)").matches) {
-		window.scrollTo({
-			top: 2070,
-			behavior: 'smooth'
-		  }); 
-	 }
 
-	 else {
-		window.scrollTo({
-			top: 1880,
-			behavior: 'smooth'
-		  });    
-	 }
+	let offsetsSkills = document.getElementsByClassName("skills")[0].getBoundingClientRect();
+	var topSkills = offsetsSkills.top + document.documentElement.scrollTop -65;
+
+	let menuToggle = document.getElementById("toggle-menu");
+	let burgerMenu = document.getElementById("burger-menu");
+	burgerMenu.classList.remove("open");
+	menuToggle.classList.add("display-none-menu");
+
+	window.scrollTo({
+		top: topSkills,
+		behavior: 'smooth'
+	}); 
+	
 }
 
 function scrollToService() {
-	if (window.matchMedia("(max-width:767px)").matches) {
-		window.scrollTo({
-			top: 6000,
-			behavior: 'smooth'
-		  }); 
-	}
-	 else if (window.matchMedia("(max-width:1024px)").matches) {
-		window.scrollTo({
-			top: 2070,
-			behavior: 'smooth'
-		  }); 
-	 }
 
-	 else {
-		window.scrollTo({
-			top: 1880,
-			behavior: 'smooth'
-		  });    
-	 }  
+	let offsetsServices = document.getElementsByClassName("services")[0].getBoundingClientRect();
+	var topServices = offsetsServices.top + document.documentElement.scrollTop -65;
+
+	let menuToggle = document.getElementById("toggle-menu");
+	let burgerMenu = document.getElementById("burger-menu");
+	burgerMenu.classList.remove("open");
+	menuToggle.classList.add("display-none-menu");
+
+
+	window.scrollTo({
+		top: topServices,
+		behavior: 'smooth'
+	}); 
+	
 }
 
 
+// ARROW BANNER SCOLL DOWN
 function scrollDown() {
-	if (window.matchMedia("(max-width:767px)").matches) {
-		window.scrollTo({
-			top: 6000,
-			behavior: 'smooth'
-		  }); 
-	}
-	 else if (window.matchMedia("(max-width:1024px)").matches) {
-		window.scrollTo({
-			top: 2070,
-			behavior: 'smooth'
-		  }); 
-	 }
+	let offsetsAPropos = document.getElementsByClassName("a-propos")[0].getBoundingClientRect();
+	var topAPropos = offsetsAPropos.top + document.documentElement.scrollTop -65;
 
-	 else {
-		window.scrollTo({
-			top: 1880,
-			behavior: 'smooth'
-		  });    
-	 }
+	window.scrollTo({
+		top: topAPropos,
+		behavior: 'smooth'
+	}); 
 }
 
-// ANIMATION NAV BAR
+// ANIMATION NAV BAR + A PROPOS + SKILLS BARS
 const navbar = document.getElementsByClassName("main-nav")[0];
 const aProposBlock = document.getElementsByClassName("a-propos")[0];
 
@@ -206,16 +214,20 @@ const barXD = document.getElementsByClassName("adobeXD")[0];
 const barFI = document.getElementsByClassName("figma")[0];
 
 window.onscroll = () => {
+
+	//ANIM NAVBAR
 	if (window.scrollY > 580) {
 		navbar.classList.add('nav-active');
 	} else {
 		navbar.classList.remove('nav-active');
 	} 
 
+	//ANIM A PROPOS ON SCROLL
 	if (window.scrollY > 200) {
 		aProposBlock.classList.add('anim-a-propos');
 	}
 
+	// ANIM SKILLS BARS
 	if (window.scrollY > 2300) {
 		barJS.classList.add('animation-bar-js');
 		barHTML.classList.add("animation-bar-html");
