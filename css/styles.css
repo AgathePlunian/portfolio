@@ -566,6 +566,25 @@ p, li, label {
   100% {
     right: 229px;
     left: 8px; } }
+#resultMessage {
+  text-align: center; }
+
+.message-success {
+  background-color: #27c569;
+  padding: 1em;
+  border-radius: 10px;
+  margin-bottom: 2em; }
+  .message-success p {
+    color: white; }
+
+.message-failure {
+  background-color: #e26258;
+  padding: 1em;
+  border-radius: 10px;
+  margin-bottom: 2em; }
+  .message-failure p {
+    color: white; }
+
 #works-area {
   min-height: 550px; }
 
@@ -839,6 +858,16 @@ p, li, label {
     width: 0; }
   100% {
     width: 30%; } }
+@keyframes pourcentBar25 {
+  0% {
+    width: 0; }
+  100% {
+    width: 25%; } }
+@keyframes pourcentBar20 {
+  0% {
+    width: 0; }
+  100% {
+    width: 20%; } }
 @keyframes pourcentBar60 {
   0% {
     width: 0; }
@@ -851,10 +880,10 @@ p, li, label {
   animation: pourcentBar70 1s ease-in-out forwards; }
 
 .animation-bar-php {
-  animation: pourcentBar40 1s ease-in-out forwards; }
+  animation: pourcentBar25 1s ease-in-out forwards; }
 
 .animation-bar-sql {
-  animation: pourcentBar30 1s ease-in-out forwards; }
+  animation: pourcentBar20 1s ease-in-out forwards; }
 
 .animation-bar-ps {
   animation: pourcentBar95 1s ease-in-out forwards; }
@@ -881,9 +910,10 @@ p, li, label {
   .form-contact h2 {
     color: #222288;
     text-align: center;
-    margin-bottom: 2em; }
+    margin-bottom: 1em; }
 
 .form-section {
+  margin-top: 1em;
   display: flex;
   justify-content: space-between; }
 
@@ -931,6 +961,8 @@ input {
   border: none;
   border-radius: 50px;
   margin-top: 0.7em; }
+  .submit-message:hover {
+    background-color: #13134b; }
 
 .names-input {
   display: flex;
@@ -940,7 +972,7 @@ input {
 
 .formData[data-error]::after {
   content: attr(data-error);
-  font-size: 0.6em;
+  font-size: 0.9em;
   font-family: 'Open Sans', sans-serif;
   color: #e26258;
   display: block;

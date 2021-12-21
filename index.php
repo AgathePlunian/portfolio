@@ -9,7 +9,14 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
-    
+        
+        <!--OG data-->
+        <meta property="og:site_name" content="Agathe Plunian portfolio" />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="http://www.agathe-plunian.com" />
+        <meta property="og:title" content="Agathe Plunian Portfolio" />
+        <meta property="og:description" content="Portfolio développeuse front-end"/>
+        <meta property="og:image" content= "https://agathe-plunian.com/img/banner/meta-img.jpg" />
 
     </head>
 
@@ -53,7 +60,7 @@
 
             
         </nav>
-    
+
         <!--BANNER-->
         <div class="banner">
             <div id="text-banner" role="heading" aria-level="1"></div>
@@ -84,7 +91,7 @@
                 <div class="rond-a-propos"></div>
                 <h2>À propos</h2>
                 <p>
-                    Après plusieurs années en tant qu’illustratrice et autrice jeunesse free-lance, j’ai décidé de me former depuis un an au métier de développeuse Front-end.<br> (The Hacking Project puis école ESECAD).
+                    Après plusieurs années en tant qu’illustratrice et autrice jeunesse free-lance,  j'ai décidé il y a deux ans, de me former au métier de développeuse Front-end.<br> (The Hacking Project puis école ESECAD).
                     <br><br>Amatrice de technologies, je souhaite mettre à profit mes compétences en arts graphiques et développement web. Je me suis donc récemment inscrite à la formation de développeur front-end chez OpenClassRooms en alternance afin de poursuivre mon apprentissage !
                 </p>
             </div>
@@ -310,12 +317,12 @@
                     <div class="bg-bar"><div class="pourcentage-bar js"></div></div>
                 </div>
 
-                <div class="pourcentage-text"><p>PHP</p><p>40%</p></div>
+                <div class="pourcentage-text"><p>PHP</p><p>25%</p></div>
                 <div class="dev-competences">
                     <div class="bg-bar"><div class="pourcentage-bar php"></div></div>
                 </div>
 
-                <div class="pourcentage-text"><p>MYSQL - SQL</p><p>30%</p></div>
+                <div class="pourcentage-text"><p>MYSQL - SQL</p><p>20%</p></div>
                 <div class="dev-competences">
                     <div class="bg-bar"><div class="pourcentage-bar sql"></div></div>
                 </div>
@@ -354,17 +361,53 @@
             download="Agathe-Plunian-CV" class="btn">Télécharger mon CV</a>
         </div>
 
-        <section class="form-contact">
+        <!--FORM CONTACT-->
+        	    
+
+        <section id="contact" class="form-contact">
+
+            
             <h2>Me contacter</h2>
             
+            <div id="resultMessage">
 
+            <?php  if(($_SERVER["REQUEST_METHOD"] == "POST")) {
+
+            $headers = "MIME-Version: 1.0" . "\r\n";
+            $headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
+            $lastName = htmlspecialchars($_POST['lastname']);
+            $firstName = htmlspecialchars($_POST['firstname']);
+            $email = htmlspecialchars($_POST['email']);
+            $subject = htmlspecialchars($_POST['subject']);
+            $msg = htmlspecialchars($_POST['message']);
+            
+             $to      = 'agathe.plunian@gmail.com';
+            $subject = $subject;
+            $message ="<html><p>Message : $msg </p><p>Email : $email</p><p>Nom: $lastName $firstName</p></html>";
+        
+            $successMessage = "Votre message à bien été envoyé, merci et à bientôt !";
+            $failureMessage = "Oups, une erreur est survenue lors de l'envoie de votre message, n'hésitez pas à me contacter par mail";
+            
+            if(mail($to, $subject, $message, $headers)) {
+                echo '<div class="message-success"><p>'.$successMessage.'</p></div>' ;
+            
+            }
+            else {
+                echo '<div class="message-failure"><p class="message-failure">'.$failureMessage.'</p></div>' ;
+            
+            }
+            
+        }
+        ?>
+
+            </div>
             <div class="form-section">
                 <div class="text-form">
                     <p>N'hésitez pas à mon contacter via ce formulaire, ou par  <a class="link" href="mailto:agathe.plunian@gmail.com">mail</a>  &#128522; ! </p>
                     <div class="illu-contact"><img src="img/contact/illustration-contact.png" alt="Illustration boite au lettre contact"></div>
                 </div>
             
-                <form class="formulaire" action="form.php" method="post"id = "form" novalidate name="sendmail"
+                <form class="formulaire" action="#contact" method="post" id = "form" name="sendmail"
                         onsubmit="return validate(event);">
 
                     <div class="names-input">
@@ -391,7 +434,7 @@
                         <textarea class="message text-control" id="message" name="message" placeholder="Votre message"></textarea> 
                     </div>
 
-                    <button id="submit-message-form" class="submit-message" type="submit">Envoyer mon message</button>
+                    <button id="submit-message-form"  name="sendmail" value="sendmail" class="submit-message" type="submit">Envoyer mon message</button>
                 </form>
             </div>
         </section>

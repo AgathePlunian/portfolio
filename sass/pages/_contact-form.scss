@@ -7,11 +7,12 @@
 	h2 {
 		color: $primary-color;
 		text-align: center;
-		margin-bottom: 2em;
+		margin-bottom: 1em;
 	}
 }
 
 .form-section {
+	margin-top: 1em;
 	display: flex;
 	justify-content: space-between;
 }
@@ -69,6 +70,10 @@ input {
 	border: none;
 	border-radius: 50px;
 	margin-top: 0.7em;
+
+	&:hover {
+		background-color: darken($primary-color, $amount: 15);
+	}
 }
 
 .names-input {
@@ -83,7 +88,7 @@ input {
 
 .formData[data-error]::after {
 	content: attr(data-error);
-	font-size: 0.6em;
+	font-size: 0.9em;
 	font-family: 'Open Sans', sans-serif;
 	color: #e26258;
 	display: block;

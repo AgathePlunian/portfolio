@@ -62,7 +62,6 @@
 	
 }
 
-
 @keyframes pourcentBar95 { 
     0% { 
 		width: 0;
@@ -116,6 +115,25 @@
 		width: 30%; }
 }
 
+@keyframes pourcentBar25 { 
+    0% { 
+		width: 0;
+	}
+
+    100% { 
+		width: 25%; }
+}
+
+@keyframes pourcentBar20 { 
+    0% { 
+		width: 0;
+	}
+
+    100% { 
+		width: 20%; }
+}
+
+
 @keyframes pourcentBar60 { 
     0% { 
 		width: 0;
@@ -135,11 +153,11 @@
 }
 
 .animation-bar-php {
-	animation: pourcentBar40 1s ease-in-out forwards;
+	animation: pourcentBar25 1s ease-in-out forwards;
 }
 
 .animation-bar-sql {
-	animation: pourcentBar30 1s ease-in-out forwards;
+	animation: pourcentBar20 1s ease-in-out forwards;
 }
 
 .animation-bar-ps {

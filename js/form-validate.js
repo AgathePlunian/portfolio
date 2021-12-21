@@ -99,7 +99,7 @@ const errorMessages = {
   
   function validate(event) {
   
-	event.preventDefault();
+	//event.preventDefault();
   
 	
    
@@ -120,7 +120,11 @@ const errorMessages = {
   
 	//CLOSE MODAL
 	{
-	 console.log("ok");
+	 return true;
   
+	}
+
+	else {
+		return false;
 	}
   }

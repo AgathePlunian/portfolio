@@ -74,7 +74,7 @@ function showPopup() {
         </div>
 		<div class="popup-flex">
 			<div class="img-popup">
-				<img src="img/popup/Webdevapercu/resileyes-aperçu.png" alt="aperçu site internet ResilEyes">
+				<img src="img/popup/Webdevapercu/resileyes-apercu.png" alt="aperçu site internet ResilEyes">
 			</div>
 			<div class="text-popup">
 				<h1 class="pop-up-title">Site vitrine ResilEyes</h1>
@@ -221,7 +221,7 @@ function showPopup() {
         </div>
 		<div class="popup-flex popup-flex-design">
 			<div class="img-popup img-popup-design">
-				<img src="img/popup/WebdesignApercu/maquette.jpeg" alt="aperçu maquette e-commerce">		
+				<img src="img/popup/WebDesignApercu/maquette.jpg" alt="aperçu maquette e-commerce">		
 			</div>
 			
 			<div class="text-popup text-popup-design">

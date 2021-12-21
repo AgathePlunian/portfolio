@@ -283,4 +283,30 @@
 }
 
 
+#resultMessage {
+	text-align: center;
+}
+
+.message-success {
+	background-color: rgb(39, 197, 105);
+	padding: 1em;
+	border-radius: 10px;
+	margin-bottom: 2em;
+	
+	p{
+		color: white;
+	}
+}
+
+.message-failure {
+	background-color: #e26258;
+	padding: 1em;
+	border-radius: 10px;
+	margin-bottom: 2em;
+	
+	p{
+		color: white;
+	}
+}
+
 
